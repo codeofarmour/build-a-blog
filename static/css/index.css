@@ -16,7 +16,7 @@
 }
 
 .form-control2 {
-    width: 1000px;
+    width: 100%;
     height: 250px;
 }
 
@@ -30,6 +30,7 @@
 }
 
 #fancy, #middle {
-    font-family: 'Oswald', sans-serif;    
+    font-family: 'Oswald', sans-serif;
+    background-color: #2ae02a;    
 }
 

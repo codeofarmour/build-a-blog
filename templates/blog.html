@@ -9,11 +9,9 @@
 
         <ul>
             {% for blog in blogs %}
-            <li>
-            <!-- <h2><a href="/blogpost?id={{blog.id}}"></a></h2> -->
-            <a href='/blog?id={{blog.id}}'><h2 id='middle'>{{blog.title}}</h2></a>                           
+            <li>            
+            <a href='/blog?id={{blog.id}}'><h2 id='middle'>{{blog.title}}</h2></a>                                      
             <p id='end'>{{blog.body}}</p>
-
             <hr>
             </li>
             {% endfor %}
