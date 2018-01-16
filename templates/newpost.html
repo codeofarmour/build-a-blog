@@ -1,17 +1,22 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>What's on your mind?</h1>
+<h1 class='question'>What's on your mind?</h1>
 <form method='POST' action='newpost'>
-    <label>
-        Blog Title:
-        <!-- <p class="error">{{title_error}}</p> -->
-        <input type="text" name="title" class='blogtitle' value="{{title}}">        
-    </label>
-    <br>
-    <label>
-        Blog Entry:        
-        <textarea name="body"  class='blogentry' value="{{body}}"></textarea>
+    <div class='form-group title'>
+        <label for='enterTitle' id='fancy'>Title This!</label>
+        <hr>
+        <input type="text" name="title" class='form-control' id='box' placeholder='Title' 
+          required autofocus value="{{title}}">     
+    </div>
+    <br />
+    <hr>
+    <br />
+    <div class='form-group body'>
+        <label for='enterText' id='fancy'>Your Story Goes Here: </label>
+        <hr>                
+        <textarea name="body"  class='form-control2' id='box' placeholder='Enter Text' 
+          required value="{{body}}"></textarea>
     </label>
         <p class="error">{{blog_error}}</p>
     

@@ -14,8 +14,7 @@ class Blog(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(200))
-    body = db.Column(db.String(510))
-    # created = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+    body = db.Column(db.String(510))    
     def __init__(self, title, body):
         self.title=title
         self.body=body    
@@ -25,8 +24,7 @@ def index():
     return redirect('/blog')   
 
 @app.route('/blog', methods = ['POST', 'GET'])
-def blog():
-    # blogs = Blog.query.order_by(Blog.id.desc()).all()
+def blog():    
 
     id = request.args.get('id')
     if id:
@@ -35,12 +33,7 @@ def blog():
     else:
         blogs = Blog.query.order_by(Blog.id.desc()).all()
         return render_template('blog.html', blogs = blogs)
-    # if request.args:
-    #     id=request.args.get('id')
-    #     title=Blog.query.filter_by(id=id).first().title
-    #     body=Blog.query.filter_by(id=id).first().body
-    # return render_template('blog.html', blogs=blogs)
-
+    
 @app.route('/newpost', methods=['POST', 'GET'])
 def newpost():
 

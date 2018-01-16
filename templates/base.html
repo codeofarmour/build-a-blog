@@ -3,12 +3,16 @@
     <head>
         <title>LC 101: Build-A-Blog</title>
         <link rel="stylesheet" type="text/css" href="/static/css/index.css">
+        <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto|Sedgwick+Ave+Display" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.13/jquery.min.js"></script>
+        <script src+"js/bootstrap.min.js"></script>
     </head>
     <body>
         <div class='nav'>
             {% block nav %}         
-            <a href='/'>Main Page</a>
-            <a href='/newpost'>Add Blog</a>
+            <a href='/' id='navs'>Main Page</a>
+            <a href='/newpost' id='navs'>Add Blog</a>
             {% endblock %}
         </div>          
              
