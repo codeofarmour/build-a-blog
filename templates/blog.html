@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>All Blog Submissions</h1>
+
+    {% if blogs|length == 0 %}
+        <p>No blogs have been submitted</p>
+    {% else %}
+
+        <ul>
+            {% for blog in blogs %}
+            <li>
+            <!-- <h2><a href="/blogpost?id={{blog.id}}"></a></h2> -->
+            <a href='/blog?id={{blog.id}}'><h2>{{blog.title}}</h2></a>                           
+            <p>{{blog.body}}</p>
+
+            <hr>
+            </li>
+            {% endfor %}
+        </div>
+
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,13 @@
+.error {
+    color: rgb(226, 26, 26);
+}
+
+.blogtitle {
+    width: 300px;
+    height: 40px;
+}
+
+.blogentry {
+    width: 300px;
+    height: 250px;
+}

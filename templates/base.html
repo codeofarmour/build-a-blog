@@ -1,12 +1,18 @@
 <!doctype html>
 <html>
     <head>
-        <title>{{title}}</title>
+        <title>LC 101: Build-A-Blog</title>
+        <link rel="stylesheet" type="text/css" href="/static/css/index.css">
     </head>
-<body>
-
+    <body>
+        <div class='nav'>
+            {% block nav %}         
+            <a href='/'>Main Page</a>
+            <a href='/newpost'>Add Blog</a>
+            {% endblock %}
+        </div>          
+             
     {% block content %}
-    {% endblock %}
-
-</body>
+    {% endblock %}   
+    </body>
 </html>

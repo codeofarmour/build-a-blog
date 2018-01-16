@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>What's on your mind?</h1>
+<form method='POST' action='newpost'>
+    <label>
+        Blog Title:
+        <!-- <p class="error">{{title_error}}</p> -->
+        <input type="text" name="title" class='blogtitle' value="{{title}}">        
+    </label>
+    <br>
+    <label>
+        Blog Entry:        
+        <textarea name="body"  class='blogentry' value="{{body}}"></textarea>
+    </label>
+        <p class="error">{{blog_error}}</p>
+    
+    <input type="submit" value="Post Blog" />
+
+</form>
+
+{% endblock %}
